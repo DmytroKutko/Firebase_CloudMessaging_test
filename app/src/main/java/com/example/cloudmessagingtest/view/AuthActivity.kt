@@ -1,8 +1,9 @@
-package com.example.cloudmessagingtest
+package com.example.cloudmessagingtest.view
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import com.example.cloudmessagingtest.AuthFragments.LoginFragment
+import com.example.cloudmessagingtest.R
+import com.example.cloudmessagingtest.view.AuthFragments.LoginFragment
 
 class AuthActivity : AppCompatActivity() {
 
@@ -20,7 +21,10 @@ class AuthActivity : AppCompatActivity() {
     private fun setInitFragment() {
         supportFragmentManager
             .beginTransaction()
-            .replace(R.id.auth_container, LoginFragment())
+            .replace(
+                R.id.auth_container,
+                LoginFragment()
+            )
             .commit()
     }
 }

@@ -1,7 +1,8 @@
-package com.example.cloudmessagingtest
+package com.example.cloudmessagingtest.view
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import com.example.cloudmessagingtest.R
 
 class MainActivity : AppCompatActivity() {
 

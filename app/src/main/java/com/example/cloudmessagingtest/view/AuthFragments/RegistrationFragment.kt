@@ -1,4 +1,4 @@
-package com.example.cloudmessagingtest.AuthFragments
+package com.example.cloudmessagingtest.view.AuthFragments
 
 
 import android.os.Bundle
@@ -8,7 +8,6 @@ import android.view.View
 import android.view.ViewGroup
 
 import com.example.cloudmessagingtest.R
-import kotlinx.android.synthetic.main.fragment_login.*
 import kotlinx.android.synthetic.main.fragment_registration.*
 
 class RegistrationFragment : Fragment() {
@@ -30,7 +29,7 @@ class RegistrationFragment : Fragment() {
 
     private fun initListener() {
         btnRegisterNewUser.setOnClickListener {
-            initRegistration()
+
         }
 
         tvRegisterToLogin.setOnClickListener {
@@ -41,9 +40,6 @@ class RegistrationFragment : Fragment() {
         }
     }
 
-    private fun initRegistration() {
-        //TO DO make registration function
-    }
 
     private fun setInitialData() {
         setTitle()

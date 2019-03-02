@@ -1,4 +1,4 @@
-package com.example.cloudmessagingtest.AuthFragments
+package com.example.cloudmessagingtest.view.AuthFragments
 
 
 import android.os.Bundle
@@ -23,12 +23,22 @@ class LoginFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
+        setInitialData()
         initListener()
+    }
+
+    private fun setInitialData() {
+        setTitle()
+    }
+
+    private fun setTitle() {
+        activity!!.title = "Login"
     }
 
     private fun initListener() {
         btnLoginSignIn.setOnClickListener {
-            initLogin()
+
+
         }
         tvLoginToRegistration.setOnClickListener {
             fragmentManager!!
@@ -36,9 +46,5 @@ class LoginFragment : Fragment() {
                 .replace(R.id.auth_container, RegistrationFragment())
                 .commit()
         }
-    }
-
-    private fun initLogin() {
-        //TO DO login function
     }
 }
