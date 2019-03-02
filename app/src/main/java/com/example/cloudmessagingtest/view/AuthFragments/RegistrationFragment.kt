@@ -8,9 +8,12 @@ import android.view.View
 import android.view.ViewGroup
 
 import com.example.cloudmessagingtest.R
+import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.fragment_registration.*
 
 class RegistrationFragment : Fragment() {
+
+    lateinit var mAuth: FirebaseAuth
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -43,6 +46,7 @@ class RegistrationFragment : Fragment() {
 
     private fun setInitialData() {
         setTitle()
+        mAuth = FirebaseAuth.getInstance()
     }
 
     private fun setTitle() {
