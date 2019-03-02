@@ -31,18 +31,14 @@ class LoginFragment : Fragment() {
             initLogin()
         }
         tvLoginToRegistration.setOnClickListener {
-            replaceToRegistration()
+            fragmentManager!!
+                .beginTransaction()
+                .replace(R.id.auth_container, RegistrationFragment())
+                .commit()
         }
     }
 
     private fun initLogin() {
         //TO DO login function
-    }
-
-    private fun replaceToRegistration() {
-        fragmentManager!!
-            .beginTransaction()
-            .replace(R.id.auth_container, RegistrationFragment())
-            .commit()
     }
 }

@@ -32,20 +32,17 @@ class RegistrationFragment : Fragment() {
         btnRegisterNewUser.setOnClickListener {
             initRegistration()
         }
-        tvLoginToRegistration.setOnClickListener {
-            replaceToLoginFragment()
+
+        tvRegisterToLogin.setOnClickListener {
+            fragmentManager!!
+                .beginTransaction()
+                .replace(R.id.auth_container, LoginFragment())
+                .commit()
         }
     }
 
     private fun initRegistration() {
         //TO DO make registration function
-    }
-
-    private fun replaceToLoginFragment() {
-        fragmentManager!!
-            .beginTransaction()
-            .replace(R.id.auth_container, LoginFragment())
-            .commit()
     }
 
     private fun setInitialData() {
