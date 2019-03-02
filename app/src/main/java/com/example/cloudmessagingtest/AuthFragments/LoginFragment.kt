@@ -27,22 +27,22 @@ class LoginFragment : Fragment() {
     }
 
     private fun initListener() {
-        replaceToRegistration()
-        initLogin()
+        btnLoginSignIn.setOnClickListener {
+            initLogin()
+        }
+        tvLoginToRegistration.setOnClickListener {
+            replaceToRegistration()
+        }
     }
 
     private fun initLogin() {
-        btnLoginSignIn.setOnClickListener {
-            //TO DO login function
-        }
+        //TO DO login function
     }
 
     private fun replaceToRegistration() {
-        tvLoginToRegistration.setOnClickListener {
-            fragmentManager!!
-                .beginTransaction()
-                .replace(R.id.auth_container, RegistrationFragment())
-                .commit()
-        }
+        fragmentManager!!
+            .beginTransaction()
+            .replace(R.id.auth_container, RegistrationFragment())
+            .commit()
     }
 }
