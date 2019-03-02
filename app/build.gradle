@@ -37,4 +37,5 @@ dependencies {
     //Firebase services
     implementation 'com.google.firebase:firebase-messaging:17.4.0'
     implementation 'com.google.firebase:firebase-auth:16.1.0'
+
 }
