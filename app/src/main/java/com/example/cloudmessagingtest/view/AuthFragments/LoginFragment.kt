@@ -19,8 +19,6 @@ import kotlinx.android.synthetic.main.fragment_login.*
 class LoginFragment : Fragment() {
 
     private val mAuth = FirebaseAuth.getInstance()
-    private lateinit var db: FirebaseDatabase
-    private lateinit var userRef: DatabaseReference
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -65,8 +63,6 @@ class LoginFragment : Fragment() {
 
     private fun setInitialData() {
         setTitle()
-        db = FirebaseDatabase.getInstance()
-        userRef = db.reference.child("Users")
     }
     private fun setTitle() {
         activity!!.title = "Login"
